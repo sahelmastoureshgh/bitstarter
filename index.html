@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html>
 <head>
+	<meta charset="utf-8">
+	<title>Hi There</title>
+</head>
+<body>
+<div id='newsResult'></div>
+<script id='newsTemplate' type="text/template">
+	<strong><%= newsSource %></strong>  <a href="<%= link %>" target="_blank" url="<%= link %>" id="newsLink"><%= title %></a>
+	
+</script>
+
+
+<script src="js/underscore.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/backbone.js"></script>
+<script src="js/jquery.jgfeed-min.js"></script>
+<script src="main.js"></script>
+</body>
+</html> -->
+<html lang="en"><head><script type="text/javascript" src="//api-public.addthis.com/url/shares.json?url=http%3A%2F%2Fwww.clicknewsup.com%2F&amp;callback=_ate.cbs.sc_httpwwwclicknewsupcom0"></script><script type="text/javascript" src="//ct1.addthis.com/static/r07/auth016.js"></script><script type="text/javascript" src="//ct1.addthis.com/static/r07/counter017.js"></script><link rel="stylesheet" type="text/css" href="//ct1.addthis.com/static/r07/counter013.css" media="all"><link rel="stylesheet" type="text/css" href="//ct1.addthis.com/static/r07/widget118.css" media="all">
 	<meta charset="utf-8">
 	<title>My First Bitstarter</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet"   href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+	<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
 	<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
-	<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+	<script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script><style type="text/css"></style>
 	<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
 	<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet"     type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
 <style type="text/css">
 
 
@@ -97,6 +116,10 @@
    .footer a {
      color: #ccccff;
    }
+   ul
+  {
+    list-style-type: none;
+   }
    
  </style>
  <script type="text/javascript">
@@ -113,7 +136,7 @@
 
  </script>
 </head>
-<body >
+<body style="">
 
     <!-- Mobile-friendly navbar adapted from example. -->
     <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
@@ -125,7 +148,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Bitstarter</a>
+          <a class="brand" href="#">NewsStarter</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -146,110 +169,57 @@
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Google And Yahoo News</h1>
+          <h1>Latest News</h1>
         </div>
       </div> 
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">Map view and list view of Google and Yahoo News</p>
+          <p class="lead">list view of latest world news</p>
         </div>
       </div>
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://i.imgur.com/SaVFZH3.jpg" alt="first picture of my site">
-        </div>
+      
+      <!-- Beyond this part the marketing copy begins. -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+      <!-- http://placehold.it -->
+    
 
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
-        <div class="span5 actions">
-          <div class="span8 offset2">
-            <div class="statistics">
-              <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look
-                different in horizontal and vertical layouts, illustrating
-                media queries. -->
-                <div class="linediv-l">
-                <h3>1</h3> <p>backers</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$100</h3> <p>of $10,000</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-r">
-                <h3>40</h3> <p>days left</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 10%;"></div>
-              <div class="bar bar-warning" style="width: 90%;"></div>
-            </div>
-          </div>
-          <div class="span6 offset3 order">
-            <!-- Standard Bootstrap button. -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-			<a class="coinbase-button" 
-			data-button-style="custom_large" 
-		    data-button-text="Preorder with Bitcoin"data-code="4d4b84bbad4508b64b61d372ea394dad"   href="https://coinbase.com/checkouts/4d4b84bbad4508b64b61d372ea394dad">Preorder With   Bitcoin</a>
-			<script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
-          </div>
-          <div class="span8 offset2 social">
-			  <!-- AddThis Button BEGIN -->
-			  <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-			  <a class="addthis_button_preferred_1"></a>
-			  <a class="addthis_button_preferred_2"></a>
-			  <a class="addthis_button_preferred_3"></a>
-			  <a class="addthis_button_preferred_4"></a>
-			  <a class="addthis_button_compact"></a>
-			  <a class="addthis_counter addthis_bubble_style"></a>
-			  </div>
+      <div class="row-fluid section2">
+        <div class="container-fluid">
+          <p>
+        	<div id='newsResult'></div>
+<script id='newsTemplate' type="text/template">
+    <div class="accordion-group copy">
+    <div class="row-fluid">
+  	<div class="span8">
+  	<div class="span2"><strong><%= newsSource %></strong></div>  <div class="span6"><a href="<%= link %>" target="_blank" url="<%= link %>" id="newsLink"><%= title %></a></div>
+  	</div>
+  	     <div class="span4" >
+  			  <!-- AddThis Button BEGIN -->
+  			  <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+  			  <a class="addthis_button_facebook addthis_button_preferred_1 at300b" title="Facebook" href="#"><span class=" at300bs at15nc at15t_facebook"><span class="at_a11y">Share on facebook</span></span></a>
+  			  <a class="addthis_button_twitter addthis_button_preferred_2 at300b" title="Tweet" href="#"><span class=" at300bs at15nc at15t_twitter"><span class="at_a11y">Share on twitter</span></span></a>
+  			  <a class="addthis_counter addthis_bubble_style" href="#" style="display: inline-block;"><a class="addthis_button_expanded" target="_blank" title="View more services" href="#">0</a><a class="atc_s addthis_button_compact"><span></span></a></a>
+  			  <div class="atclear"></div></div>
+  		 </div>
+  	</div>	 
+   </div>
 			  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-			  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520d771746638f9e"></script>
+			  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520d771746638f9e"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe id="_atssh161" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="//ct1.addthis.com/static/r07/sh142.html#iit=1384366890817&amp;tmr=load%3D1384366887098%26core%3D1384366887456%26main%3D1384366890812%26ifr%3D1384366890820&amp;cb=0&amp;cdn=1&amp;chr=UTF-8&amp;kw=&amp;ab=-&amp;dh=www.clicknewsup.com&amp;dr=&amp;du=http%3A%2F%2Fwww.clicknewsup.com%2F&amp;dt=My%20First%20Bitstarter&amp;dbg=0&amp;md=0&amp;cap=tc%3D0%26ab%3D1&amp;inst=1&amp;vcl=1&amp;jsl=33&amp;prod=undefined&amp;lng=en-US&amp;ogt=&amp;pc=men&amp;pub=ra-520d771746638f9e&amp;ssl=0&amp;sid=5283c32746b4cba5&amp;srpl=1&amp;srcs=1&amp;srd=1&amp;srf=1&amp;srx=1&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;aa=0&amp;rev=124737&amp;ct=1&amp;xld=1&amp;xd=1"></iframe></div><script type="text/javascript" src="http://ct1.addthis.com/static/r07/core109.js"></script>
 			  <!-- AddThis Button END -->
             <!-- Social buttons are not included in default Bootstrap. -->
             <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
             <!--button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button-->
             <!--button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button-->
           </div>
-        </div>
       </div>
-
-      <!-- Beyond this part the marketing copy begins. -->
-      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
-      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
-      <!-- http://placehold.it -->
-      <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://i.imgur.com/PhC5STL.png" alt="image list view news">
-        </div>
-        <div class="span5 copy">
-          <p>
-            Have you ever wished to see all important world news from major news agency?</br>
-			This project is about streaming Google and Yahoo news with ability to vote on them.</br>
-			The list view will shows the latest news from all major news agency and you can vote on that news</br>
-			Try to bring the most important news to headline by voting on them. 
+	
+</script>
           </p>
         </div>
-      </div>
-
-      <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>
-            The second part of this project is about see where the news come from in google map</br>
-			You can see world news in google map <br>
-          </p>
-        </div>
-        <div class="span5 asset">
-          <img class="img-polaroid" src="http://i.imgur.com/veUfOrt.png" alt="image for map view">
-        </div>
+        
       </div>
 
       <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
@@ -310,13 +280,25 @@
 	  ga('send', 'pageview');
 
 	</script>
+	<div id='newsResult'></div>
+<script id='newsTemplate' type="text/template">
+	<strong><%= newsSource %></strong>  <a href="<%= link %>" target="_blank" url="<%= link %>" id="newsLink"><%= title %></a>
+	
+</script>
+
+
+<script src="underscore.js"></script>
+<script src="jquery.js"></script>
+<script src="backbone.js"></script>
+<script src="jquery.jgfeed-min.js"></script>
+<script src="main.js"></script>
   
 
-</body>
-</html>
+
+
 
 
 
 
   	    
-  	   
+  	   <iframe src="https://coinbase.com/buttons/4d4b84bbad4508b64b61d372ea394dad/widget?buttonStyle=custom_large&amp;buttonText=Preorder+with+Bitcoin&amp;code=4d4b84bbad4508b64b61d372ea394dad&amp;referrer=www.clicknewsup.com" id="coinbase_modal_iframe_4d4b84bbad4508b64b61d372ea394dad" name="coinbase_modal_iframe_4d4b84bbad4508b64b61d372ea394dad" style="background-color: transparent; border: 0px none transparent; overflow: hidden; display: none; position: fixed; visibility: visible; margin: 0px; padding: 0px; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 9999;" scrolling="no" allowtransparency="true" frameborder="0"></iframe></body></html>
