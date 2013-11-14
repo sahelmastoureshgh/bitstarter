@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!-- <html>
+<head>
+	<meta charset="utf-8">
+	<title>Hi There</title>
+</head>
+<body>
+<div id='newsResult'></div>
+<script id='newsTemplate' type="text/template">
+	<strong><%= newsSource %></strong>  <a href="<%= link %>" target="_blank" url="<%= link %>" id="newsLink"><%= title %></a>
+	
+</script>
+
+
+<script src="js/underscore.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/backbone.js"></script>
+<script src="js/jquery.jgfeed-min.js"></script>
+<script src="main.js"></script>
+</body>
+</html> -->
+<html lang="en"><head><script type="text/javascript" src="//api-public.addthis.com/url/shares.json?url=http%3A%2F%2Fwww.clicknewsup.com%2F&amp;callback=_ate.cbs.sc_httpwwwclicknewsupcom0"></script><script type="text/javascript" src="//ct1.addthis.com/static/r07/auth016.js"></script><script type="text/javascript" src="//ct1.addthis.com/static/r07/counter017.js"></script><link rel="stylesheet" type="text/css" href="//ct1.addthis.com/static/r07/counter013.css" media="all"><link rel="stylesheet" type="text/css" href="//ct1.addthis.com/static/r07/widget118.css" media="all">
+	<meta charset="utf-8">
+	<title>My First Bitstarter</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+	<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
+	<script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script><style type="text/css"></style>
+	<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+	<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+<style type="text/css">
+
+
+   /* Large desktop */
+   @media (min-width: 980px) { 
+     body {
+      padding-top: 60px;
+     }
+    .linediv-l {
+      border-right: 1px white solid;
+     }
+    .linediv-r {
+      border-left: 1px white solid;
+    }
+   }
+
+   /* Landscape phones and down */
+   @media (max-width: 480px) { 
+    .copy {
+      padding: 2.5% 10%;
+    }
+    .linediv-l {
+      border-bottom: 1px white solid;
+    }
+    .linediv-r {
+      border-top: 1px white solid;
+    }
+   }
+
+   /* All form factors */
+
+   /* Main body and headings */
+   body{
+     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+   }
+   .heading, .subheading {
+     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+     text-align: center;
+   }
+   p.lead {
+     padding-top: 1.5%;
+     font-size: 24px;
+     line-height: 30px;
+   }
+   p {
+     font-size: 18px;
+     line-height: 24px;
+   }
+
+   /* Video pitch and Action */
+   .pitch {
+     padding: 2.5% 0%;
+   }
+   .order {
+     padding: 2% 0%;
+   }
+   .actions {
+     background-color: #343434;
+     padding: 3% 0%;
+   }
+   .video, .thermometer, .order, .social, .statistics {
+     text-align: center;
+   }
+   .statistics h3, .statistics p {
+     color: white;
+   }
+
+   /* Marketing Copy and Footer */
+   .copy {
+     padding-top: 2.5%;
+     padding-bottom: 2.5%;
+     text-align: justify;
+   }
+   .asset {
+     padding: 2.5% 0%;
+   }
+   .footer {
+     color: #cccccc;
+     text-align: center;
+   }
+   .footer p {
+     font-size: 11px;
+   }
+   .footer a {
+     color: #ccccff;
+   }
+   ul
+  {
+    list-style-type: none;
+   }
+   
+ </style>
+ <script type="text/javascript">
+
+   var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'UA-43252165-1']);
+   _gaq.push(['_trackPageview']);
+
+   (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+
+ </script>
+</head>
+<body style="">
+
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">NewsStarter</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+    <!-- http://stackoverflow.com/a/12270322 -->
+    <div class="container">
+      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+      <!-- www.google.com/fonts/specimen/Ubuntu -->
+      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+      <div class="row-fluid heading">
+        <div class="span12">
+          <h1>Latest News</h1>
+        </div>
+      </div> 
+      <div class="row-fluid subheading">
+        <div class="span12">
+          <!-- Special typography from Bootstrap for lead paragraph. -->
+          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+          <p class="lead">list view of latest world news</p>
+        </div>
+      </div>
+      
+      <!-- Beyond this part the marketing copy begins. -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+      <!-- http://placehold.it -->
+    
+
+      <div class="row-fluid section2">
+        <div class="container-fluid">
+          <p>
+        	<div id='newsResult'></div>
+<script id='newsTemplate' type="text/template">
+    <div class="accordion-group copy">
+    <div class="row-fluid">
+  	<div class="span8">
+  	<div class="span2"><strong><%= newsSource %></strong></div>  <div class="span6"><a href="<%= link %>" target="_blank" url="<%= link %>" id="newsLink"><%= title %></a></div>
+  	</div>
+  	     <div class="span4" >
+  			  <!-- AddThis Button BEGIN -->
+  			  <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+  			  <a class="addthis_button_facebook addthis_button_preferred_1 at300b" title="Facebook" href="#"><span class=" at300bs at15nc at15t_facebook"><span class="at_a11y">Share on facebook</span></span></a>
+  			  <a class="addthis_button_twitter addthis_button_preferred_2 at300b" title="Tweet" href="#"><span class=" at300bs at15nc at15t_twitter"><span class="at_a11y">Share on twitter</span></span></a>
+  			  <a class="addthis_counter addthis_bubble_style" href="#" style="display: inline-block;"><a class="addthis_button_expanded" target="_blank" title="View more services" href="#">0</a><a class="atc_s addthis_button_compact"><span></span></a></a>
+  			  <div class="atclear"></div></div>
+  		 </div>
+  	</div>	 
+   </div>
+			  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+			  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520d771746638f9e"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe id="_atssh161" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="//ct1.addthis.com/static/r07/sh142.html#iit=1384366890817&amp;tmr=load%3D1384366887098%26core%3D1384366887456%26main%3D1384366890812%26ifr%3D1384366890820&amp;cb=0&amp;cdn=1&amp;chr=UTF-8&amp;kw=&amp;ab=-&amp;dh=www.clicknewsup.com&amp;dr=&amp;du=http%3A%2F%2Fwww.clicknewsup.com%2F&amp;dt=My%20First%20Bitstarter&amp;dbg=0&amp;md=0&amp;cap=tc%3D0%26ab%3D1&amp;inst=1&amp;vcl=1&amp;jsl=33&amp;prod=undefined&amp;lng=en-US&amp;ogt=&amp;pc=men&amp;pub=ra-520d771746638f9e&amp;ssl=0&amp;sid=5283c32746b4cba5&amp;srpl=1&amp;srcs=1&amp;srd=1&amp;srf=1&amp;srx=1&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;aa=0&amp;rev=124737&amp;ct=1&amp;xld=1&amp;xd=1"></iframe></div><script type="text/javascript" src="http://ct1.addthis.com/static/r07/core109.js"></script>
+			  <!-- AddThis Button END -->
+            <!-- Social buttons are not included in default Bootstrap. -->
+            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+            <!--button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button-->
+            <!--button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button-->
+          </div>
+      </div>
+	
+</script>
+          </p>
+        </div>
+        
+      </div>
+
+      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+      <div class="row-fluid faq">
+          <div class="span10 offset1">
+            <h3>FAQ</h3>
+            <div class="accordion" id="accordion2">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                    What does FAQ stand for?
+                  </a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    what is this ?
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                    What's a Frequently Asked Question?
+                  </a>
+                </div>
+                <div id="collapseTwo" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                   something goes here.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
+      <!-- http://creativecommons.org/licenses/ -->
+      <div class="row-fluid footer">
+        <div class="span12">
+          <p>This work is licensed under
+            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+              By-SA 3.0
+            </a>, without all the cruft that would otherwise be
+            put at the bottom of the page.</p>
+        </div>
+      </div>
+    </div>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-43252165-1', 'clicknewsup.com');
+	  ga('send', 'pageview');
+
+	</script>
+	<div id='newsResult'></div>
+<script id='newsTemplate' type="text/template">
+	<strong><%= newsSource %></strong>  <a href="<%= link %>" target="_blank" url="<%= link %>" id="newsLink"><%= title %></a>
+	
+</script>
+
+
+<script src="underscore.js"></script>
+<script src="jquery.js"></script>
+<script src="backbone.js"></script>
+<script src="jquery.jgfeed-min.js"></script>
+<script src="main.js"></script>
+  
+
+
+
+
+
+
+
+  	    
+  	   <iframe src="https://coinbase.com/buttons/4d4b84bbad4508b64b61d372ea394dad/widget?buttonStyle=custom_large&amp;buttonText=Preorder+with+Bitcoin&amp;code=4d4b84bbad4508b64b61d372ea394dad&amp;referrer=www.clicknewsup.com" id="coinbase_modal_iframe_4d4b84bbad4508b64b61d372ea394dad" name="coinbase_modal_iframe_4d4b84bbad4508b64b61d372ea394dad" style="background-color: transparent; border: 0px none transparent; overflow: hidden; display: none; position: fixed; visibility: visible; margin: 0px; padding: 0px; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 9999;" scrolling="no" allowtransparency="true" frameborder="0"></iframe></body></html>
