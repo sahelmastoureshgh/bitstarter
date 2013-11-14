@@ -1,9 +1,9 @@
 var express = require('express');
 var fs = require('fs');
-//require('./main.js');
-//require('./backbone.js');
-//require('./underscore');
-//require('./jquery.jgfeed-min');
+require('./main');
+require('./backbone');
+require('./underscore');
+require('./jquery.jgfeed-min');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
