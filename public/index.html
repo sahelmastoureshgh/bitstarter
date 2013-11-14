@@ -197,17 +197,22 @@
   	<div class="span2"><strong><%= newsSource %></strong></div>  <div class="span6"><a href="<%= link %>" target="_blank" url="<%= link %>" id="newsLink"><%= title %></a></div>
   	</div>
   	     <div class="span4" >
-  			  <!-- AddThis Button BEGIN -->
-  			  <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-  			  <a class="addthis_button_facebook addthis_button_preferred_1 at300b" title="Facebook" href="#"><span class=" at300bs at15nc at15t_facebook"><span class="at_a11y">Share on facebook</span></span></a>
-  			  <a class="addthis_button_twitter addthis_button_preferred_2 at300b" title="Tweet" href="#"><span class=" at300bs at15nc at15t_twitter"><span class="at_a11y">Share on twitter</span></span></a>
-  			  <a class="addthis_counter addthis_bubble_style" href="#" style="display: inline-block;"><a class="addthis_button_expanded" target="_blank" title="View more services" href="#">0</a><a class="atc_s addthis_button_compact"><span></span></a></a>
-  			  <div class="atclear"></div></div>
+
+  	          <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style">
+                   <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                   <a class="addthis_button_tweet"></a>
+                   <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                </div>
+                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520d771746638f9e"></script>
+             <!-- AddThis Button END -->
+  			  
+  			  <div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe id="_atssh161" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="//ct1.addthis.com/static/r07/sh142.html#iit=1384366890817&amp;tmr=load%3D1384366887098%26core%3D1384366887456%26main%3D1384366890812%26ifr%3D1384366890820&amp;cb=0&amp;cdn=1&amp;chr=UTF-8&amp;kw=&amp;ab=-&amp;dh=www.clicknewsup.com&amp;dr=&amp;du=http%3A%2F%2Fwww.clicknewsup.com%2F&amp;dt=My%20First%20Bitstarter&amp;dbg=0&amp;md=0&amp;cap=tc%3D0%26ab%3D1&amp;inst=1&amp;vcl=1&amp;jsl=33&amp;prod=undefined&amp;lng=en-US&amp;ogt=&amp;pc=men&amp;pub=ra-520d771746638f9e&amp;ssl=0&amp;sid=5283c32746b4cba5&amp;srpl=1&amp;srcs=1&amp;srd=1&amp;srf=1&amp;srx=1&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;aa=0&amp;rev=124737&amp;ct=1&amp;xld=1&amp;xd=1"></iframe></div><script type="text/javascript" src="http://ct1.addthis.com/static/r07/core109.js"></script>
   		 </div>
   	</div>	 
    </div>
-			  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-			  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520d771746638f9e"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe id="_atssh161" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="//ct1.addthis.com/static/r07/sh142.html#iit=1384366890817&amp;tmr=load%3D1384366887098%26core%3D1384366887456%26main%3D1384366890812%26ifr%3D1384366890820&amp;cb=0&amp;cdn=1&amp;chr=UTF-8&amp;kw=&amp;ab=-&amp;dh=www.clicknewsup.com&amp;dr=&amp;du=http%3A%2F%2Fwww.clicknewsup.com%2F&amp;dt=My%20First%20Bitstarter&amp;dbg=0&amp;md=0&amp;cap=tc%3D0%26ab%3D1&amp;inst=1&amp;vcl=1&amp;jsl=33&amp;prod=undefined&amp;lng=en-US&amp;ogt=&amp;pc=men&amp;pub=ra-520d771746638f9e&amp;ssl=0&amp;sid=5283c32746b4cba5&amp;srpl=1&amp;srcs=1&amp;srd=1&amp;srf=1&amp;srx=1&amp;ver=300&amp;xck=0&amp;xtr=0&amp;og=&amp;aa=0&amp;rev=124737&amp;ct=1&amp;xld=1&amp;xd=1"></iframe></div><script type="text/javascript" src="http://ct1.addthis.com/static/r07/core109.js"></script>
+			  
 			  <!-- AddThis Button END -->
             <!-- Social buttons are not included in default Bootstrap. -->
             <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
@@ -288,7 +293,7 @@
 
 
 <script src="underscore.js"></script>
-<script src="jquery.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="backbone.js"></script>
 <script src="jquery.jgfeed-min.js"></script>
 <script src="main.js"></script>
