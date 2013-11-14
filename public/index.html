@@ -139,13 +139,7 @@
 <body style="">
 	<!--facebook share-->
 	<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
 <!--end facebook sahre-->
 
     <!-- Mobile-friendly navbar adapted from example. -->
@@ -207,8 +201,14 @@
   	     <div class="span2"><strong><%= newsSource %></strong></div>  <div class="span6"><a href="<%= link %>" target="_blank" url="<%= link %>" id="newsLink"><%= title %></a></div>
   	    </div>
   	    <div class="span4"  >
+  	         <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_facebook" href="https://www.facebook.com/sharer/sharer.php?u=<%= link %>" target="_blank">Share on Facebook</a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520d771746638f9e"></script>
+<!-- AddThis Button END -->
 
-  	          <div class="fb-share-button" data-href="http://www.bbc.com" data-type="button_count"></div>
             
         </div>
   			  
