@@ -191,6 +191,10 @@ function feedParser(url, source,number) {
 						if (newssrc == 'AP') {
 							newssrc = 'Associated Press';
 						}
+						else
+						{
+						   newssrc ='Yahoo';
+					    }
 					} else {
 						newssrc = 'Yahoo';
 					}
