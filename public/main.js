@@ -1,5 +1,92 @@
 //@uthor: sahel mastoureshgh
 //Date: November 2013
+
+var AppRouter = Backbone.Router.extend({
+
+    routes: {
+        ""                  : "home",
+        "about"             : "about",
+        "contact"           : "contact"
+    },
+
+	home: function() {
+     	$('#homeId').addClass("active");	
+      	$('#contactId').removeClass("active");	
+   	    $('#aboutId').removeClass("active");	
+		$('#AboutTag').hide();
+		$('#ContactTag').hide();
+		$('#mainNews').show();
+		$('#newsResult').show();
+
+	},
+    about: function () {
+        if (!this.aboutView) {
+            this.aboutView = new AboutView();
+            $('#AboutTag').append(this.aboutView.render().el);
+        }
+     	$('#aboutId').addClass("active");	
+      	$('#contactId').removeClass("active");	
+   	    $('#homeId').removeClass("active");	
+        $('#AboutTag').show();
+        $('#ContactTag').hide();
+        $('#mainNews').hide();
+        $('#newsResult').hide();
+		
+        
+    },
+    contact: function () {
+    	 if (!this.contactView) {
+            this.contactView = new ContactView();
+            $('#ContactTag').append(this.contactView.render().el);
+        }
+	 $('#contactId').addClass("active");	
+	 $('#aboutId').removeClass("active");	
+	 $('#homeId').removeClass("active");	
+     $('#ContactTag').show(); 	
+     $('#AboutTag').hide();
+     $('#mainNews').hide(); 	
+     $('#newsResult').hide();	
+       
+    }
+
+});
+
+AboutView = Backbone.View.extend({
+
+    
+
+	template: _.template($('#AboutMe').html()),
+
+
+
+	render: function() {
+		this.$el.html(this.template());
+
+		return this;
+	}
+
+});
+ContactView = Backbone.View.extend({
+
+    
+
+	template: _.template($('#ContactMe').html()),
+
+
+
+	render: function() {
+		this.$el.html(this.template());
+
+		return this;
+	}
+
+});
+
+
+
+
+   
+
 // News Model
 var News = Backbone.Model.extend({
 	defaults: {
@@ -32,6 +119,8 @@ var AllNewsView = Backbone.View.extend({
 	render: function() {
 		this.$el.empty();
 		this.collection.each(this.addOne, this);
+		this.$el.find('li:first-child').remove(0);
+
 		return this;
 	},
 	//add each news to view
@@ -55,6 +144,7 @@ var NewsView = Backbone.View.extend({
 
 	render: function() {
 		this.$el.html(this.template(this.model.toJSON()));
+
 		return this;
 	}
 
@@ -130,6 +220,18 @@ function feedParser(url, source,number) {
 
 
 $(document).ready(function() {
+
+	
+ (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+ 
+    app = new AppRouter();
+    Backbone.history.start();
 	var allgoogleCollection = new AllNewsCollection({});
 	var allyahooCollection = new AllNewsCollection({});
 	allgoogleCollection = feedParser("http://news.google.com/?output=rss", 'google',10);
@@ -143,9 +245,11 @@ $(document).ready(function() {
 	var allyahooView = new AllNewsView({
 		collection: allyahooCollection
 	});
-
+	
+  
 	$('#newsResult').append(allnewsView.render().el);
 	$('#newsResult').append(allyahooView.render().el);
-
+	
+	
 
 });
